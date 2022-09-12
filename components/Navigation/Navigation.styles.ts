@@ -1,15 +1,21 @@
 import styled from "styled-components";
 
 export const NavigationHeader = styled.nav`
-  width: 100vw;
+  width: calc(100vw - 86px);
   height: 200px;
   display: flex;
   align-items: center;
+  gap: 24px;
   justify-content: flex-end;
+  position: sticky;
+  top: 0;
 `;
 
 export const IconContainer = styled.div`
-  margin-right: 112px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .backgroundFlower {
     transition: fill 0.5s ease-in-out;
   }
@@ -18,4 +24,9 @@ export const IconContainer = styled.div`
       fill: #e13357;
     }
   }
+`;
+
+export const StyledAnchor = styled.a`
+  position: absolute;
+  font-weight: bold;
 `;

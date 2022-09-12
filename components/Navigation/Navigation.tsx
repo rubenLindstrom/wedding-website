@@ -1,15 +1,26 @@
 import React from "react";
-import { Ranukel } from "../Icon/Ranukel";
-import { IconContainer, NavigationHeader } from "./Navigation.styles";
+import Link from "next/link";
 
-const Navigation = () => {
-  return (
-    <NavigationHeader>
-      <IconContainer>
-        <Ranukel />
-      </IconContainer>
-    </NavigationHeader>
-  );
+import { Ranukel } from "../Icon/Ranukel";
+import {
+  IconContainer,
+  NavigationHeader,
+  StyledAnchor,
+} from "./Navigation.styles";
+
+type LinkProps = { links: { title: string; link: string }[] };
+
+const Navigation: React.FC<LinkProps> = ({ links }) => {
+  console.log(links);
+  const ranukels = links.map((link) => (
+    <IconContainer key={link.link}>
+      <Ranukel />
+      <Link href={link.link} passHref>
+        <StyledAnchor>{link.title}</StyledAnchor>
+      </Link>
+    </IconContainer>
+  ));
+  return <NavigationHeader>{ranukels}</NavigationHeader>;
 };
 
 export { Navigation };
