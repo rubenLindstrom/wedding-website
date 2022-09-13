@@ -9,7 +9,7 @@ export const Timeline: React.FC<{
   }[];
 }> = ({ events }) => {
   const timelineEvents = events.map((event, index) => (
-    <EventContainer isEven={index % 2 === 0}>
+    <EventContainer isEven={index % 2 === 0} key={event.name}>
       <Time>{event.time}</Time>
       <span>{event.name}</span>
       <p>{event.description}</p>
