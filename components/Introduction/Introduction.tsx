@@ -1,5 +1,6 @@
 import React from "react";
 import { Ranukel } from "../Icon/Ranukel";
+import { RoseLeft, RoseRight } from "../Icon/Roses";
 import { IconContainer, StyledAnchor } from "../Navigation/Navigation.styles";
 import { IntroductionContainer } from "./Introduction.styles";
 
@@ -16,5 +17,7 @@ export const Introduction: React.FC<{
         Venue
       </StyledAnchor>
     </IconContainer>
+    <RoseLeft />
+    <RoseRight />
   </IntroductionContainer>
 );

@@ -9,6 +9,7 @@ export const NavigationHeader = styled.nav`
   justify-content: flex-end;
   position: sticky;
   top: 0;
+  z-index: 50;
 `;
 
 export const IconContainer = styled.div`

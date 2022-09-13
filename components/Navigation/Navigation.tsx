@@ -11,7 +11,6 @@ import {
 type LinkProps = { links: { title: string; link: string }[] };
 
 const Navigation: React.FC<LinkProps> = ({ links }) => {
-  console.log(links);
   const ranukels = links.map((link) => (
     <IconContainer key={link.link}>
       <Ranukel />
