@@ -56,8 +56,8 @@ export const Branch = () => (
     <path
       d="M130.871 64.7136C136.744 64.7136 141.929 65.1384 147.538 66.8642C151.395 68.0509 160.069 68.2699 162.055 72.2408"
       stroke="#357E4A"
-      stroke-width="5"
-      stroke-linecap="round"
+      strokeWidth="5"
+      strokeLinecap="round"
     />
   </BranchSVG>
 );
