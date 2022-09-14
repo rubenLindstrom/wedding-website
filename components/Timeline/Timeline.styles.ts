@@ -1,30 +1,56 @@
 import styled from "styled-components";
 
 export const TimelineContainer = styled.div`
-  margin-top: 112px;
+  margin: 80px auto auto auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1440px;
+  position: relative;
+  gap: 36px;
+  @media screen and (min-width: 900px) {
+    margin-top: 224px;
+  }
 `;
 
 export const Time = styled.span`
   font-weight: bold;
-  font-size: 56px;
+  font-size: 32px;
+  @media screen and (min-width: 900px) {
+    font-size: 56px;
+  }
+`;
+
+export const Name = styled.span`
+  font-weight: bold;
+  font-size: 12px;
+  @media screen and (min-width: 900px) {
+    font-size: 24px;
+  }
 `;
 
 export const EventContainer = styled.li<{ isEven: boolean }>`
   display: flex;
   flex-direction: column;
   width: fit-content;
+  text-align: center;
   position: relative;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  @media screen and (min-width: 900px) {
+    text-align: left;
+    transform: ${({ isEven }) =>
+      isEven ? `translateX(-75%)` : `translateX(75%)`};
+  }
 
   p {
-    width: 300px;
-    position: absolute;
-    top: 100%;
+    width: 200px;
     margin: 0;
-    margin-left: ${({ isEven }) => (isEven ? "0" : "16px")};
-    transform: ${({ isEven }) =>
-      isEven ? `translateX(-100%)` : `translateX(50%)`};
+    font-size: 12px;
+    @media screen and (min-width: 900px) {
+      font-size: 14px;
+      width: 300px;
+    }
   }
 `;

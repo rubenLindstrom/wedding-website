@@ -1,5 +1,11 @@
 import React from "react";
-import { EventContainer, Time, TimelineContainer } from "./Timeline.styles";
+import { Branch } from "../Icon/Branch";
+import {
+  EventContainer,
+  Name,
+  Time,
+  TimelineContainer,
+} from "./Timeline.styles";
 
 export const Timeline: React.FC<{
   events: {
@@ -11,9 +17,15 @@ export const Timeline: React.FC<{
   const timelineEvents = events.map((event, index) => (
     <EventContainer isEven={index % 2 === 0} key={event.name}>
       <Time>{event.time}</Time>
-      <span>{event.name}</span>
+      <Name>{event.name}</Name>
       <p>{event.description}</p>
     </EventContainer>
   ));
-  return <TimelineContainer>{timelineEvents}</TimelineContainer>;
+  return (
+    <TimelineContainer>
+      <h2>Itinirerary</h2>
+      <Branch />
+      {timelineEvents}
+    </TimelineContainer>
+  );
 };
