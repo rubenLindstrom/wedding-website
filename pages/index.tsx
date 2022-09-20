@@ -81,5 +81,6 @@ export const getStaticProps = async () => {
       links,
       events,
     },
+    revalidate: 43200,
   };
 };
