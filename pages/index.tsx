@@ -2,13 +2,20 @@ import type { NextPage } from "next";
 import { createClient } from "next-sanity";
 import Head from "next/head";
 import Image from "next/image";
-import { Navigation, Headline, Introduction, Timeline } from "../components";
+import {
+  Navigation,
+  Headline,
+  Introduction,
+  Timeline,
+  Wishlist,
+} from "../components";
 import styles from "../styles/Home.module.css";
 
 type PageProps = {
   infoText: {
     title: string;
     text: string;
+    type: string;
   }[];
   headLine: {
     headline: string;
@@ -61,8 +68,15 @@ const Home: NextPage<PageProps> = ({ infoText, headLine, links, events }) => {
           .reverse()}
       />
       <Headline headLine={headLine[0].headline} />
-      <Introduction title={infoText[0].title} introduction={infoText[0].text} />
+      <Introduction
+        title={infoText.find((info) => info.type === "Intro")!.title}
+        introduction={infoText.find((info) => info.type === "Intro")!.text}
+      />
       <Timeline events={timelineEvents} />
+      <Wishlist
+        title={infoText.find((info) => info.type === "Wishlist")!.title}
+        text={infoText.find((info) => info.type === "Wishlist")!.text}
+      />
     </div>
   );
 };

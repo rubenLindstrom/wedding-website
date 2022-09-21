@@ -11,11 +11,9 @@ export const Introduction: React.FC<{
   <IntroductionContainer>
     <h3>{title}</h3>
     <p>{introduction}</p>
-    <IconContainer>
+    <IconContainer href="https://spritmuseum.se/" target="_blank">
       <Ranukel />
-      <StyledAnchor href="https://spritmuseum.se/" target="_blank">
-        Venue
-      </StyledAnchor>
+      <StyledAnchor>Venue</StyledAnchor>
     </IconContainer>
     <RoseLeft />
     <RoseRight />

@@ -15,7 +15,7 @@ export const NavigationHeader = styled.nav`
   }
 `;
 
-export const IconContainer = styled.div`
+export const IconContainer = styled.a`
   position: relative;
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@ export const IconContainer = styled.div`
   }
 `;
 
-export const StyledAnchor = styled.a`
+export const StyledAnchor = styled.span`
   position: absolute;
   font-weight: bold;
   font-size: 12px;

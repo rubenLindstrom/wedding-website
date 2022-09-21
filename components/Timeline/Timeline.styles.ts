@@ -40,6 +40,7 @@ export const EventContainer = styled.li<{ isEven: boolean }>`
   padding: 16px;
   @media screen and (min-width: 900px) {
     text-align: left;
+    background-color: transparent;
     transform: ${({ isEven }) =>
       isEven ? `translateX(-75%)` : `translateX(75%)`};
   }
