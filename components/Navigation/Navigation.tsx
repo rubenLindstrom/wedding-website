@@ -12,11 +12,8 @@ type LinkProps = { links: { title: string; link: string }[] };
 
 const Navigation: React.FC<LinkProps> = ({ links }) => {
   const ranukels = links.map((link) => (
-    <Link href={link.link} passHref>
-      <IconContainer
-        key={link.link}
-        target={link.title === "RSVP" ? "_blank" : "_self"}
-      >
+    <Link href={link.link} passHref key={link.link}>
+      <IconContainer target={link.title === "RSVP" ? "_blank" : "_self"}>
         <Ranukel />
         <StyledAnchor>{link.title}</StyledAnchor>
       </IconContainer>
