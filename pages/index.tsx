@@ -8,6 +8,7 @@ import {
   Introduction,
   Timeline,
   Wishlist,
+  Footer,
 } from "../components";
 import styles from "../styles/Home.module.css";
 
@@ -66,6 +67,7 @@ const Home: NextPage<PageProps> = ({ infoText, headLine, links, events }) => {
         links={links
           .map((link) => ({ title: link.title, link: link.link }))
           .reverse()}
+        currentPage="/"
       />
       <Headline headLine={headLine[0].headline} />
       <Introduction
@@ -77,6 +79,7 @@ const Home: NextPage<PageProps> = ({ infoText, headLine, links, events }) => {
         title={infoText.find((info) => info.type === "Wishlist")!.title}
         text={infoText.find((info) => info.type === "Wishlist")!.text}
       />
+      <Footer />
     </div>
   );
 };

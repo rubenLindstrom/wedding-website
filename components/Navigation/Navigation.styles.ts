@@ -42,6 +42,7 @@ export const IconContainer = styled.a`
 export const StyledAnchor = styled.span`
   position: absolute;
   font-weight: bold;
+  font-family: DPDorkDiary;
   font-size: 12px;
   @media screen and (min-width: 900px) {
     font-size: 16px;

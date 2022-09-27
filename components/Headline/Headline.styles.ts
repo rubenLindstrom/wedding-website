@@ -10,4 +10,10 @@ export const HeadlineWrapper = styled.div`
   justify-content: center;
 `;
 
-export const StyledHeadline = styled.h1``;
+export const StyledHeadline = styled.h1`
+  font-family: DPDorkDiary;
+  font-size: 32px;
+  @media screen and (min-width: 800px) {
+    font-size: 48px;
+  }
+`;
