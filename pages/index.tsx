@@ -64,7 +64,7 @@ const Home: NextPage<PageProps> = ({ infoText, headLine, links, events }) => {
   );
 
   return (
-    <div>
+    <div style={{ top: 0 }}>
       <Head>
         <title>Wedding Website</title>
         <meta name="description" content="Valeris and Annes wedding website" />

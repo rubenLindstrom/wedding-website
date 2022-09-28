@@ -7,6 +7,7 @@ export const NavigationHeader = styled.nav`
   gap: 24px;
   justify-content: center;
   top: 0;
+  left: 0;
   position: fixed;
   z-index: 51;
   width: 100%;
