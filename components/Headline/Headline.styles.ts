@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const HeadlineWrapper = styled.div`
-  height: calc(100vh - 200px);
   max-width: 1440px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 200px;
+  @media screen and (min-width: 800px) {
+    height: calc(100vh - 200px);
+  }
 `;
 
 export const StyledHeadline = styled.h1`
