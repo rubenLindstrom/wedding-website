@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const HeadlineWrapper = styled.div`
   max-width: 1440px;
-  margin: auto;
   display: flex;
+  margin-top: 180px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   @media screen and (min-width: 800px) {
     height: calc(100vh - 200px);
+    margin: auto;
   }
 `;
 

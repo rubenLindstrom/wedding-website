@@ -69,16 +69,18 @@ const Home: NextPage<PageProps> = ({ infoText, headLine, links, events }) => {
           .reverse()}
         currentPage="/"
       />
-      <Headline headLine={headLine[0].headline} />
-      <Introduction
-        title={infoText.find((info) => info.type === "Intro")!.title}
-        introduction={infoText.find((info) => info.type === "Intro")!.text}
-      />
-      <Timeline events={timelineEvents} />
-      <Wishlist
-        title={infoText.find((info) => info.type === "Wishlist")!.title}
-        text={infoText.find((info) => info.type === "Wishlist")!.text}
-      />
+      <main>
+        <Headline headLine={headLine[0].headline} />
+        <Introduction
+          title={infoText.find((info) => info.type === "Intro")!.title}
+          introduction={infoText.find((info) => info.type === "Intro")!.text}
+        />
+        <Timeline events={timelineEvents} />
+        <Wishlist
+          title={infoText.find((info) => info.type === "Wishlist")!.title}
+          text={infoText.find((info) => info.type === "Wishlist")!.text}
+        />
+      </main>
       <Footer />
     </div>
   );

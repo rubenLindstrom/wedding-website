@@ -1,16 +1,19 @@
 import styled from "styled-components";
 
 export const NavigationHeader = styled.nav`
+  margin-top: 16px;
   display: flex;
   align-items: center;
   gap: 24px;
   justify-content: center;
-  position: sticky;
   top: 0;
+  position: fixed;
   z-index: 51;
+  width: 100%;
   @media screen and (min-width: 900px) {
     justify-content: flex-end;
     width: calc(100vw - 86px);
+    position: sticky;
     height: 200px;
   }
 `;
