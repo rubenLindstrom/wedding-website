@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { createClient } from "next-sanity";
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect } from "react";
 import {
   Navigation,
   Headline,
@@ -40,6 +41,12 @@ const client = createClient({
 });
 
 const Home: NextPage<PageProps> = ({ infoText, headLine, links, events }) => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const timelineEvents = events
     .map((event) => ({
       name: event.name,

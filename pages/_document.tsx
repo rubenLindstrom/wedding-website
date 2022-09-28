@@ -11,6 +11,18 @@ export default function Document() {
           as="font"
           type="font/woff2"
         />
+        <link
+          rel="preload"
+          href="/fonts/DPDorkyDiary.woff"
+          as="font"
+          type="font/woff"
+        />
+        <link
+          rel="preload"
+          href="/fonts/DPDorkyDiary.ttf"
+          as="font"
+          type="font/ttf"
+        />
       </Head>
       <body>
         <Main />
