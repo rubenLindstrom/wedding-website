@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const NavigationHeader = styled.nav`
-  height: 200px;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -12,6 +11,7 @@ export const NavigationHeader = styled.nav`
   @media screen and (min-width: 900px) {
     justify-content: flex-end;
     width: calc(100vw - 86px);
+    height: 200px;
   }
 `;
 
