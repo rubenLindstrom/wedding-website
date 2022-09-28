@@ -5,7 +5,12 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="font" href="/fonts/DPDorkyDiary.ttf" />
+        <link
+          rel="preload"
+          href="/fonts/DPDorkyDiary.woff2"
+          as="font"
+          type="font/woff2"
+        />
       </Head>
       <body>
         <Main />

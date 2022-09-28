@@ -6,7 +6,7 @@ export const NavigationHeader = styled.nav`
   align-items: center;
   gap: 24px;
   justify-content: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 51;
   @media screen and (min-width: 900px) {
