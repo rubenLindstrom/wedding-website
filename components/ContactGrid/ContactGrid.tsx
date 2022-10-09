@@ -1,5 +1,6 @@
 import React from "react";
 import { ContactProps, ContactCard } from "../Card/ContactCard";
+import { RoseLeft, RoseRight } from "../Icon/Roses";
 import { Grid } from "./ContactGrid.styles";
 
 type ContactGridProps = {
@@ -22,12 +23,19 @@ const ContactGrid: React.FC<ContactGridProps> = ({ cards }) => {
       title={card.title}
       email={card.email}
       tel={card.tel}
+      description={card.description}
       key={card.name}
       rotation={rotations[index]}
       backgroundColor={colors[index]}
     />
   ));
-  return <Grid>{contactCards}</Grid>;
+  return (
+    <Grid>
+      {contactCards}
+      <RoseLeft />
+      <RoseRight />
+    </Grid>
+  );
 };
 
 export { ContactGrid };

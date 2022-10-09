@@ -15,6 +15,7 @@ export const CardContainer = styled.div<{
   height: 150px;
   width: 70vw;
   transition: all 0.4s ease-in-out;
+  z-index: 10;
   :hover {
     rotate: 0deg;
     scale: 1.2;

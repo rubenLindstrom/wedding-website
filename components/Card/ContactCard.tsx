@@ -6,6 +6,7 @@ export type ContactProps = {
   title: string;
   email?: string;
   tel?: string;
+  description?: string;
   rotation?: string;
   backgroundColor?: string;
 };
@@ -15,6 +16,7 @@ const ContactCard: React.FC<ContactProps> = ({
   title,
   email,
   tel,
+  description,
   rotation,
   backgroundColor,
 }) => {
@@ -24,6 +26,7 @@ const ContactCard: React.FC<ContactProps> = ({
       <Detail>{title}</Detail>
       <Detail>{email}</Detail>
       <Detail>{tel}</Detail>
+      <Detail>{description}</Detail>
     </CardContainer>
   );
 };

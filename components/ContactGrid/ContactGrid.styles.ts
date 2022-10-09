@@ -15,4 +15,18 @@ export const Grid = styled.div`
     grid-template-columns: 180px 180px 180px;
     grid-gap: 96px;
   }
+  .left-rose {
+    left: 10px;
+    display: none;
+    @media screen and (min-width: 800px) {
+      display: block;
+    }
+  }
+  .right-rose {
+    right: 10px;
+    display: none;
+    @media screen and (min-width: 800px) {
+      display: block;
+    }
+  }
 `;

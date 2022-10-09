@@ -22,6 +22,7 @@ type PageProps = {
     title: string;
     email: string;
     tel: string;
+    description: string;
   }[];
 };
 
@@ -45,6 +46,7 @@ const Home: NextPage<PageProps> = ({ links, contacts }) => {
           title: contact.title,
           email: contact?.email,
           tel: contact?.tel,
+          description: contact?.description,
         }))}
       />
     </div>

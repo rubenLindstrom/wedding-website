@@ -11,7 +11,7 @@ export const NavigationHeader = styled.nav`
   position: fixed;
   z-index: 51;
   width: 100%;
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 800px) {
     justify-content: flex-end;
     width: calc(100vw - 86px);
     position: sticky;
