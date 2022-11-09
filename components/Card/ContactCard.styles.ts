@@ -38,6 +38,8 @@ export const Name = styled.span`
 
 export const Detail = styled.span`
   font-size: 12px;
+  padding: 0 10px;
+  text-align: center;
   @media screen and (min-width: 800px) {
     font-size: 12px;
   }

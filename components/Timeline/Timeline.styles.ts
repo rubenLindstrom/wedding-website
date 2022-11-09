@@ -42,7 +42,7 @@ export const EventContainer = styled.li<{ isEven: boolean }>`
     text-align: left;
     background-color: transparent;
     transform: ${({ isEven }) =>
-      isEven ? `translateX(-75%)` : `translateX(75%)`};
+      isEven ? `translateX(-100%)` : `translateX(100%)`};
   }
 
   p {
