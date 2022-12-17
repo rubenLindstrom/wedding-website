@@ -11,9 +11,13 @@ export const TimelineContainer = styled.div`
   @media screen and (min-width: 900px) {
     margin-top: 224px;
   }
+  h2 {
+    font-family: "Rosario";
+  }
 `;
 
 export const Time = styled.span`
+  font-family: "Rosario";
   font-weight: bold;
   font-size: 32px;
   @media screen and (min-width: 900px) {
@@ -22,6 +26,7 @@ export const Time = styled.span`
 `;
 
 export const Name = styled.span`
+  font-family: "Rosario";
   font-weight: bold;
   font-size: 12px;
   @media screen and (min-width: 900px) {
@@ -35,7 +40,7 @@ export const EventContainer = styled.li<{ isEven: boolean }>`
   width: fit-content;
   text-align: center;
   position: relative;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   padding: 16px;
   @media screen and (min-width: 900px) {
@@ -49,6 +54,7 @@ export const EventContainer = styled.li<{ isEven: boolean }>`
     width: 200px;
     margin: 0;
     font-size: 12px;
+    font-family: "Rosario";
     @media screen and (min-width: 900px) {
       font-size: 14px;
       width: 300px;

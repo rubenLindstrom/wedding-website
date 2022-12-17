@@ -23,7 +23,7 @@ export const Timeline: React.FC<{
   ));
   return (
     <TimelineContainer>
-      <h2>Itinerary</h2>
+      <h2>Tidsplan</h2>
       <Branch />
       {timelineEvents}
     </TimelineContainer>

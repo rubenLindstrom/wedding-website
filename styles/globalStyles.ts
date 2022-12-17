@@ -1,14 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-    html,
-    body {
-    background-color:#FBF8F1;
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    @font-face {
+   @font-face {
     font-family: DPDorkDiary;
     src: url('DPDorkDiary.woff2') format('woff2'),
         url('DPDorkDiary.woff') format('woff');
@@ -16,6 +9,28 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-display: swap;
     }
+    @font-face {
+    font-family: Rosario;
+    src: url('Rosario-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    }
+    @font-face {
+    font-family: Rosario;
+    src: url('Rosario-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    }
+    html,
+    body {
+    background-color:#FBF8F1;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+ 
     }
     
 

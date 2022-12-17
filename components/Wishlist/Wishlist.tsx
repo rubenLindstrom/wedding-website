@@ -6,7 +6,7 @@ export const Wishlist: React.FC<{
   text: string;
 }> = ({ title, text }) => (
   <IntroductionContainer>
-    <h3>{title}</h3>
+    <h2>{title}</h2>
     <p>{text}</p>
   </IntroductionContainer>
 );

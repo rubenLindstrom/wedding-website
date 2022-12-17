@@ -11,7 +11,6 @@ import {
   Wishlist,
   Footer,
 } from "../components";
-import styles from "../styles/Home.module.css";
 
 type PageProps = {
   infoText: {
@@ -54,6 +53,10 @@ const Home: NextPage<PageProps> = ({ infoText, headLine, links, events }) => {
       time: event.time,
     }))
     .sort((a, b) => (a.time > b.time ? 1 : -1));
+  const dayBefore = timelineEvents.find((ev) =>
+    ev.name.includes("Dagen innan")
+  )!;
+  timelineEvents.splice(timelineEvents.indexOf(dayBefore), 1);
   const lastEvent = timelineEvents.shift();
   timelineEvents.push(
     lastEvent as {
@@ -62,6 +65,7 @@ const Home: NextPage<PageProps> = ({ infoText, headLine, links, events }) => {
       time: string;
     }
   );
+  timelineEvents.unshift(dayBefore);
 
   return (
     <div style={{ top: 0 }}>

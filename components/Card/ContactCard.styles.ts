@@ -10,6 +10,7 @@ export const CardContainer = styled.div<{
   text-align: left;
   justify-content: center;
   background-color: ${({ backgroundColor }) => backgroundColor};
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
   height: 100%;
   gap: 12px;
   height: 150px;

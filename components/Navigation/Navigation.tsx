@@ -17,7 +17,9 @@ const Navigation: React.FC<LinkProps> = ({ links, currentPage }) => {
   const ranukels = links.map((link) => (
     <Link
       href={
-        link.title === "Contact" && currentPage === "contact" ? "/" : link.link
+        link.title === "Kontakta oss" && currentPage === "contact"
+          ? "/"
+          : link.link
       }
       passHref
       key={link.link}
@@ -25,8 +27,8 @@ const Navigation: React.FC<LinkProps> = ({ links, currentPage }) => {
       <IconContainer target={link.title === "RSVP" ? "_blank" : "_self"}>
         <Ranukel />
         <StyledAnchor>
-          {link.title === "Contact" && currentPage === "contact"
-            ? "Home"
+          {link.title === "Kontakta oss" && currentPage === "contact"
+            ? "Hem"
             : link.title}
         </StyledAnchor>
       </IconContainer>

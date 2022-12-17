@@ -9,11 +9,11 @@ export const Introduction: React.FC<{
   introduction: string;
 }> = ({ title, introduction }) => (
   <IntroductionContainer>
-    <h3>{title}</h3>
+    <h2>{title}</h2>
     <p>{introduction}</p>
     <IconContainer href="https://spritmuseum.se/" target="_blank">
       <Ranukel />
-      <StyledAnchor>Venue</StyledAnchor>
+      <StyledAnchor>Lokal</StyledAnchor>
     </IconContainer>
     <RoseLeft />
     <RoseRight />

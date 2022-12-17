@@ -8,5 +8,10 @@ export default {
       type: "string",
       title: "Headline",
     },
+    {
+      name: "headline_en",
+      type: "string",
+      title: "Headline (en)",
+    },
   ],
 };

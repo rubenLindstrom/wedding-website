@@ -14,9 +14,19 @@ export default {
       title: "Title",
     },
     {
+      name: "title_en",
+      type: "string",
+      title: "Title (en)",
+    },
+    {
       name: "text",
       type: "string",
       title: "Text",
+    },
+    {
+      name: "text_en",
+      type: "string",
+      title: "Text (en)",
     },
   ],
 };

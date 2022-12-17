@@ -14,6 +14,11 @@ export default {
       title: "Title",
     },
     {
+      name: "title_en",
+      type: "string",
+      title: "Title (en)",
+    },
+    {
       name: "email",
       type: "string",
       title: "E-mail",
@@ -27,6 +32,11 @@ export default {
       name: "description",
       type: "string",
       title: "Description",
+    },
+    {
+      name: "description_en",
+      type: "string",
+      title: "Description (en)",
     },
   ],
 };
