@@ -24,7 +24,7 @@ const Navigation: React.FC<LinkProps> = ({ links, currentPage }) => {
       passHref
       key={link.link}
     >
-      <IconContainer target={link.title === "RSVP" ? "_blank" : "_self"}>
+      <IconContainer target={link.title === "OSA" ? "_blank" : "_self"}>
         <Ranukel />
         <StyledAnchor>
           {link.title === "Kontakta oss" && currentPage === "contact"

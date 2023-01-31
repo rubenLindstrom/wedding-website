@@ -41,6 +41,7 @@ export const Detail = styled.span`
   font-size: 12px;
   padding: 0 10px;
   text-align: center;
+  overflow-wrap: anywhere;
   @media screen and (min-width: 800px) {
     font-size: 12px;
   }

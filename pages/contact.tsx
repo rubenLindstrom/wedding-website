@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { createClient } from "next-sanity";
 import Head from "next/head";
 import Image from "next/image";
-import { Navigation, Headline, ContactGrid } from "../components";
+import { Navigation, Headline, ContactGrid, Footer } from "../components";
 import styles from "../styles/Home.module.css";
 
 const client = createClient({
@@ -49,6 +49,7 @@ const Home: NextPage<PageProps> = ({ links, contacts }) => {
           description: contact?.description,
         }))}
       />
+      <Footer />
     </div>
   );
 };
