@@ -39,6 +39,9 @@ export const IntroductionContainer = styled.div`
     }
     max-width: 600px;
     text-align: center;
+    &.wishlistText {
+      margin-bottom: 0;
+    }
   }
 
   .left-rose {
