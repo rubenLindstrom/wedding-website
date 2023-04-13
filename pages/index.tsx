@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { createClient } from "next-sanity";
 import Head from "next/head";
-import Image from "next/image";
 import { useEffect } from "react";
 import {
   Navigation,
@@ -11,6 +10,7 @@ import {
   Wishlist,
   Footer,
 } from "../components";
+import { fieldMask } from "../util";
 
 type PageProps = {
   infoText: {
@@ -46,12 +46,9 @@ const Home: NextPage<PageProps> = ({ infoText, headLine, links, events }) => {
       behavior: "smooth",
     });
   }, []);
+
   const timelineEvents = events
-    .map((event) => ({
-      name: event.name,
-      description: event.description,
-      time: event.time,
-    }))
+    .slice()
     .sort((a, b) => (a.time > b.time ? 1 : -1));
   const dayBefore = timelineEvents.find((ev) =>
     ev.name.includes("Dagen innan")
@@ -74,12 +71,7 @@ const Home: NextPage<PageProps> = ({ infoText, headLine, links, events }) => {
         <meta name="description" content="Valeris and Annes wedding website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation
-        links={links
-          .map((link) => ({ title: link.title, link: link.link }))
-          .reverse()}
-        currentPage="/"
-      />
+      <Navigation links={links.slice().reverse()} currentPage="/" />
       <main>
         <Headline headLine={headLine[0].headline} />
         <Introduction
@@ -104,12 +96,13 @@ export const getStaticProps = async () => {
   const infoText = await client.fetch(`*[_type == "infoText"]`);
   const links = await client.fetch(`*[_type == "link"]`);
   const events = await client.fetch(`*[_type == "event"]`);
+
   return {
     props: {
-      headLine,
-      infoText,
-      links,
-      events,
+      headLine: fieldMask(headLine, ["headline"]),
+      infoText: fieldMask(infoText, ["title", "text", "type"]),
+      links: fieldMask(links, ["title", "link"]),
+      events: fieldMask(events, ["name", "time", "description"]),
     },
     revalidate: 43200,
   };
