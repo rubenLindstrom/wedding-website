@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
 import { createClient } from "next-sanity";
 import Head from "next/head";
-import Image from "next/image";
-import { Navigation, Headline, ContactGrid, Footer } from "../components";
-import styles from "../styles/Home.module.css";
+import { Navigation, ContactGrid, Footer } from "../components";
+import { fieldMask } from "../util";
 
 const client = createClient({
   projectId: "mam500cy",
@@ -34,21 +33,8 @@ const Home: NextPage<PageProps> = ({ links, contacts }) => {
         <meta name="description" content="Contact information" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation
-        links={links
-          .map((link) => ({ title: link.title, link: link.link }))
-          .reverse()}
-        currentPage="contact"
-      />
-      <ContactGrid
-        cards={contacts.map((contact) => ({
-          name: contact.name,
-          title: contact.title,
-          email: contact?.email,
-          tel: contact?.tel,
-          description: contact?.description,
-        }))}
-      />
+      <Navigation links={links.slice().reverse()} currentPage="contact" />
+      <ContactGrid cards={contacts} />
       <Footer />
     </div>
   );
@@ -61,8 +47,14 @@ export const getStaticProps = async () => {
   const contacts = await client.fetch(`*[_type == "contact"]`);
   return {
     props: {
-      links,
-      contacts,
+      links: fieldMask(links, ["title", "link"]),
+      contacts: fieldMask(contacts, [
+        "name",
+        "title",
+        "email",
+        "tel",
+        "description",
+      ]),
     },
     revalidate: 43200,
   };
